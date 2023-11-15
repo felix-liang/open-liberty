@@ -670,7 +670,7 @@ public class OidcClientCallerClaims extends CommonTest {
         String accessToken = builder.build();
         expectations = vData.addExpectation(expectations, Constants.LOGIN_USER, Constants.RESPONSE_FULL, Constants.STRING_CONTAINS, "Did not see the role printed in the app output", null, "groupIds=" + "[group:RealmInAccessToken/MyTestRoleInAccessToken]");
         expectations = vData.addExpectation(expectations, Constants.LOGIN_USER, Constants.RESPONSE_FULL, Constants.STRING_CONTAINS, "Did not see the realmName printed in the app output", null, "realmName=" + "RealmInAccessToken");
-        expectations = vData.addExpectation(expectations, Constants.LOGIN_USER, Constants.RESPONSE_FULL, Constants.STRING_CONTAINS, "Did not see the realmName printed in the app output", null, "getUserPrincipal: WSPrincipal:userInAccessToken");
+        expectations = vData.addExpectation(expectations, Constants.LOGIN_USER, Constants.RESPONSE_FULL, Constants.STRING_CONTAINS, "Did not see the userPrincipal printed in the app output", null, "getUserPrincipal: WSPrincipal:userInAccessToken");
        
 
         builder.setClaim("upn","otheruserInIdtoken");
